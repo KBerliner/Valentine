@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+body {
+	background-image: url(./symbol-scatter-haikei.svg);
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.images {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.img {
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+}
+
+.img:nth-child(1) {
+	background-image: url(./images/ChristmasTree.jpeg);
+}
+
+.img:nth-child(2) {
+	background-image: url(./images/ClimbingInPrague.jpeg);
+}
+
+.img:nth-child(3) {
+	background-image: url(./images/CouchSmile.jpeg);
+}
+
+.img:nth-child(4) {
+	background-image: url(./images/InsideCasaBonita.jpeg);
+}
+
+.img:nth-child(5) {
+	background-image: url(./images/MurnauBrewery.jpeg);
+}
+
+.img:nth-child(6) {
+	background-image: url(./images/Opera.jpeg);
+}
+
+.img:nth-child(7) {
+	background-image: url(./images/OutsideCasaBonita.jpeg);
+}
+
+.img:nth-child(8) {
+	background-image: url(./images/ProseccoBoat.jpeg);
+}
+
+.img:nth-child(9) {
+	background-image: url(./images/TopOfHike.jpeg);
+}
+
+.img:nth-child(10) {
+	background-image: url(./images/StuntingTheCUMerch.jpeg);
+}
+
+.img:nth-child(11) {
+	background-image: url(./images/TurkeySandwichesAtBalloonFest.jpeg);
+}
+
+.img:nth-child(12) {
+	background-image: url(./images/WrappingPresents.jpeg);
+}
+
+.text {
+	width: 60vw;
+	height: 60vh;
+	backdrop-filter: blur(10px);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -30vh;
+	margin-left: -30vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 48px;
+	display: grid;
+	place-items: center;
+}
+
+h1 {
+	color: white;
+	font-family: "Dancing Script", serif;
+	font-size: 128px;
+	mask-image: linear-gradient(
+		-75deg,
+		rgba(0, 0, 0, 0.5) 30%,
+		#000 50%,
+		rgba(0, 0, 0, 0.5) 70%
+	);
+	mask-size: 200%;
+	animation: shine 2s linear infinite;
+}
+
+svg {
+	width: 8vw;
+	position: fixed;
+	z-index: 10;
+}
+
+svg > path {
+	animation: beat infinite 1.5s;
+}
+
+svg:nth-child(1) {
+	top: 24vh;
+	left: 21vw;
+	transform: rotate(-30deg);
+}
+
+svg:nth-child(2) {
+	top: 62vh;
+	right: 22vw;
+	transform: rotate(22deg);
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes shine {
+	from {
+		-webkit-mask-position: 150%;
+	}
+	to {
+		-webkit-mask-position: -50%;
+	}
+}
